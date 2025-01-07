@@ -64,7 +64,9 @@ p {
 }
 
 .avatar {
-    
+    width: 300px;
+    border-radius: var(--border-radius);
+    flex-shrink: 0;
 }
 
 .about-me-container {
