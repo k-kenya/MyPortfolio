@@ -126,8 +126,8 @@ a {
 }
 
 skills-container > * {
-    font-size: 2em;
-    width: 2em;
+    font-size: 40em;
+    width: 10em;
     margin-top: var(--spacing-1);
 }
 

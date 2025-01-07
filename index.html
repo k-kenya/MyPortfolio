@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KKay's Portfolio</title>
     <link rel="stylesheet" href="resources/style.css">
-    <link rel="stylesheet" href="resources/all.min.css">
     <script src="https://kit.fontawesome.com/d5e34b69c5.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -24,11 +23,11 @@
             <div class="about-me-container">
                 <div class="about-me-text-container">
                     <h2>About Me</h2>
-                    <p>Hi I'm KKay! I'm fairly new to programming, but welcome to my portfolio!! Stay tuned to see how it all turns out! </p>
+                    <p>Hi I'm KKay! I'm fairly new to programming, but welcome to my portfolio!! Right now, it's been <span id="time-container">0</span> seconds! Stay tuned to see how it all turns out! </p>
                     <p>I live in the UK and just completed my Bachelor's Degree in Mathematics, but am looking to broaden my skills in order to pursue a career in software development.</p>
                     <p>I'm also a singer! In my free time I like to record my own song covers. Perhaps one day I'll make another portfolio for my singing projects!!</p>
                 </div>
-                <img src="" alt="An avatar of KKay" class="avatar">
+                <img src="resources/kkay_avatar.jpg" alt="An avatar of KKay" class="avatar">
             </div>
         </section>
         <section id="projects">
@@ -45,14 +44,14 @@
         <section id="skills">
             <h2>Skills</h2>
             <div id="skills-container">
-                <i class="fab fa-html5"></i>
-                <i class="fab fa-css3-alt"></i>
-                <i class="fab fa-js"></i>
-                <i class="fab fa-git"></i>
-                <i class="fab fa-chrome"></i>
-                <i class="fas fa-terminal"></i>
-                <i class="fab fa-node"></i>
-                <i class="fab fa-github"></i>
+                <i class="fab fa-html5 icon"></i>
+                <i class="fab fa-css3-alt icon"></i>
+                <i class="fab fa-js icon"></i>
+                <i class="fab fa-git icon"></i>
+                <i class="fab fa-chrome icon"></i>
+                <i class="fas fa-terminal icon"></i>
+                <i class="fab fa-node icon"></i>
+                <i class="fab fa-github icon"></i>
             </div>
         </section>
     </main>
@@ -60,7 +59,19 @@
         Made with <span class="heart">♥</span> in London
     </footer>
     <script>
+        const timeContainer = document.getElementById("time-container");
+        const START_DAY = "2024-09-17";
+        const START_DAY_DATE = new Date(START_DAY);
+        const intlNumberFormatter = new Intl.NumberFormat("en-UK");
 
+        setInterval(() => {
+            const now = new Date();
+            const difference = Math.floor(
+                (now.getTime() - START_DAY_DATE.getTime()) / 1000
+            );
+
+            timeContainer.innerText = intlNumberFormatter.format(difference);
+        }, 1000);
     </script>
 </body>
 </html>
