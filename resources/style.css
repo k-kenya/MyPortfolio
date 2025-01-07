@@ -59,9 +59,9 @@ header, nav {
     margin: var(--spacing-1);
 }
 
-p {
+/*p {
     padding: var(--spacing-1)
-}
+}*/
 
 .avatar {
     width: 300px;
@@ -103,7 +103,9 @@ section {
 }
 
 .icon {
-
+ font-size: 2em;
+ color: var(--font-color);
+ margin: 0 var(--spacing-1);
 }
 
 a {
